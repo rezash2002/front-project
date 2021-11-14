@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="grid">
+    </div>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login Form</div>
+        <div class="title signup">Signup Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slider" id="login" checked>
+            <input type="radio" name="slider" id="signup" >
+            <label class="slide login" for="login">Login</label>
+            <label class="slide signup" for="signup">Signup</label>
+            <div class="slide-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form class="login" action="#" method="post">
+              <div class="field">
+                <label for="login email" class="text">Email Address:</label>
+                <input type="text" placeholder="Email Address"required id="login email" autofocus>
+              </div>
+              <div class="field"><label for="login password" class="text">Password:</label>
+                <input type="password" placeholder="Password"required id="login password">
+              </div>
+              <div class="pass-link"><a href="#">Forget password?</a></div>
+              <div class="field">
+                <input type="submit" value="Login">
+              </div>
+              <div class="signup-link">Not a member?  <a href="#">Signup now</a></div>
+            </form>
+            <form class="signup" action="login_signup.php" method="post">
+              <div class="field">
+                <label for="fullname" class="text">Full Name:</label>
+                <input type="text" placeholder="Full name"required id="fullname" name="signup_fullname" autofocus>
+              </div>
+              <div class="field">
+                <label for="email" class="text">Email Address:</label>
+                <input type="email" placeholder="Email Address"required id="email" name="signup_email">
+              </div>
+              <div class="field">
+                  <label for="password" class="text">Password:</label>
+                <input type="password" placeholder="Password"required id="password" name="signup_password">
+              </div>
+              <div class="field">
+                <label for="Confirm password" class="text">Confirm Password:</label>
+                <input type="password" placeholder="Confirm password"required id="Confirm password" name="signup_confirmpassword">
+              </div>
+              <div class="field">
+                <input type="submit" value="Signup">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script>
+        const loginForm = document.querySelector("form.login");
+        const signupForm = document.querySelector("form.signup");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signuplink = document.querySelector(".signup-link a");
+        const loginText = document.querySelector(".title-text .login");
+        const signupText = document.querySelector(".title-text .signup");
+        signupBtn.onclick = (()=>{
+          loginForm.style.marginLeft = "-50%";
+          loginText.style.marginLeft = "-50%";
+        });
+        loginBtn.onclick = (()=>{
+          loginForm.style.marginLeft = "0%";
+          loginText.style.marginLeft = "0%";
+        });
+        signuplink.onclick = (()=>{
+          signupBtn.click();
+          return false;
+        });
+      </script>
+      <div class="grid">
+      </div>
+  </body>
+</html>
