@@ -7,8 +7,8 @@ $dbc = new mysqli('localhost', 'root', '', 'project');
 
 //create insert query
 mysqli_query($dbc, "SET NAMES utf8");
-$sql = "INSERT INTO products(name, price, category, caption)
-        VALUES('{$_POST['name']}', '{$_POST['price']}', '{$_POST['category']}', '{$_POST['caption']}')";
+$sql = "INSERT INTO products(name, price, category, caption ,picture)
+        VALUES('{$_POST['name']}', '{$_POST['price']}', '{$_POST['category']}', '{$_POST['caption']}' , '../picture/4.png')";
 
 //execute query
 $result = $dbc -> query($sql);

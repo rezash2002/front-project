@@ -22,7 +22,7 @@ else{
 }
 
 
-//create insert query
+//create query
 $sql = "SELECT * FROM users WHERE id = '$id'";
 
 
