@@ -13,7 +13,7 @@
       </div>
       <div class="form-container">
         <div class="form-inner">
-          <form action="#" method="post">
+          <form action="edit_product_controller.php?id=3" method="post">
             <div class="field">
               <label for="product-name" class="text">نام:</label>
               <input
@@ -21,20 +21,24 @@
                 placeholder="نام محصول"
                 required
                 id="product-name"
+                name="product-name"
                 autofocus
+                value="<?=$nameProduct?>"
               />
             </div>
             <div class="field">
               <label for="category" class="text">دسته بندی:</label>
-              <input type="text" placeholder="دسته بندی محصول" id="category" />
+              <input type="text" placeholder="دسته بندی محصول" id="category" value="<?=$category ?>" name="category" />
             </div>
             <div class="field">
-              <label for="password" class="text">قیمت:</label>
+              <label for="price" class="text">قیمت:</label>
               <input
                 type="number"
                 placeholder="قیمت محصول"
                 required
-                id="password"
+                id="price"
+                name="price"
+                value="<?=$price ?>"
               />
             </div>
             <div class="field">
@@ -53,10 +57,11 @@
               <label for="textarea" class="text">درباره محصول:</label>
               <textarea
                 id="textarea"
-                name="body"
                 placeholder="توضیحاتی درباره محصول خود بنویسید... "
                 required
-              ></textarea>
+                name="caption"
+              
+              ><?=$caption?></textarea>
             </div>
             <div class="field">
               <input type="reset" value="Reset" />
